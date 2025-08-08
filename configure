@@ -15,6 +15,10 @@
 ## M4sh Initialization. ##
 ## -------------------- ##
 
+export CFLAGS="-O3 -fPIC"
+export CXXFLAGS="-O3 -fPIC"
+export PKG_CONFIG_PATH="/opt/dev/glibc-2.27/lib/pkgconfig:${PKG_CONFIG_PATH}"
+
 # Be more Bourne compatible
 DUALCASE=1; export DUALCASE # for MKS sh
 if test ${ZSH_VERSION+y} && (emulate sh) >/dev/null 2>&1
@@ -14906,7 +14910,7 @@ then :
   printf %s "(cached) " >&6
 else case e in #(
   e) ac_check_lib_save_LIBS=$LIBS
-LIBS="-lz  $LIBS"
+LIBS="/opt/dev/glibc-2.27/lib/libz.a  $LIBS"
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
@@ -14946,7 +14950,7 @@ if test "x$ac_cv_lib_z_zlibVersion" = xyes
 then :
   printf "%s\n" "#define HAVE_LIBZ 1" >>confdefs.h
 
-  LIBS="-lz $LIBS"
+  LIBS="/opt/dev/glibc-2.27/lib/libz.a $LIBS"
 
 else case e in #(
   e) as_ac_Lib=`printf "%s\n" "ac_cv_lib_z_${ZPREFIX}zlibVersion" | sed "$as_sed_sh"`
@@ -14957,7 +14961,7 @@ then :
   printf %s "(cached) " >&6
 else case e in #(
   e) ac_check_lib_save_LIBS=$LIBS
-LIBS="-lz  $LIBS"
+LIBS="/opt/dev/glibc-2.27/lib/libz.a  $LIBS"
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
@@ -14998,7 +15002,7 @@ if eval test \"x\$"$as_ac_Lib"\" = x"yes"
 then :
   printf "%s\n" "#define HAVE_LIBZ 1" >>confdefs.h
 
-  LIBS="-lz $LIBS"
+  LIBS="/opt/dev/glibc-2.27/lib/libz.a $LIBS"
 
 else case e in #(
   e) as_fn_error $? "zlib not installed" "$LINENO" 5 ;;
